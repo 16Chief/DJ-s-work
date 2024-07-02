@@ -29,8 +29,9 @@ playlists
 images
 ![event images](https://github.com/16Chief/DJ-s-work/assets/156420647/044d6874-062b-479a-837a-29403b379b7a)
 
-**Credits:** Acknowledge contributors and link to their profiles.
-Thabang Nkomo 
+**Credits:** 
+
+*Thabang Nkomo 
 https://github.com/16Chief
 
 
