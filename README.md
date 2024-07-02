@@ -5,7 +5,7 @@
 4. Usecase of project
 5. Credits
 
-#**DJ-s-work**
+#DJ-s-work
 
 **Description of project**
 marketing page for a DJ's, to know where they will be having their next event and pictures and playlists of previous events where people can enjoy DJ's previous sets and a list of songs played at previous events 
