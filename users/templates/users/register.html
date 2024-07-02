@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Page</title>
+    <style>
+        body {
+            background-color: #0a260a;
+            background-image: url('dancing.jpg');
+            background-repeat: no-repeat;
+            background-position: bottom center;
+        }
+        h2 {
+            color: rgb(244, 244, 48);
+        }
+    </style>
+</head>
+<body>
+    <h2>Register here</h2>
+    <hr>
+    <style>
+        body {
+            color: rgb(148, 148, 17);
+        }
+    </style>
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        {% for field in form %}
+                <div>
+            <p>{{ field.label }}: <br> {{ field }}</p> 
+
+            {% for error in field.errors %}
+                <small style="color: red">{{ error }}</small>
+            {% endfor %}
+        </div>
+    {% endfor %}
+    <button type="submit">Register</button>
+    </form>
+</body>
+<div id="footer">
+    <div id="img-1">
+        <a href="users"><img src='dancing.jpg' alt='dancing.jpg'></a>
+        <!-- Add more images as needed -->
+    </div>
+    <style>
+        footer {
+            color: rgb(148, 148, 17);
+        }
+        .centered-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        }
+    </style>
+
+    <div class="centered-text">
+    <h4>Access the musical experience</h4>
+</div>
+
+</html>

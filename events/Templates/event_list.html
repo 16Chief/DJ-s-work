@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ's @ work</title>
+    <style>
+        body {
+            background-color: #0a260a;;
+        }
+        h1, h3, p, body, form, ul {
+            color: rgb(244, 244, 48);
+        }
+    </style>
+</head>
+<form method="post" action="{% url 'create_event' %}">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="Event Name">
+    <select name="category">
+        <!-- Populate categories dynamically -->
+        <!-- Replace with actual category options -->
+    </select>
+    <input type="datetime-local" name="start_date" placeholder="Start Date and Time">
+    <!-- Add other fields as needed -->
+    <button type="submit">Create Event</button>
+</form>
+<body>
+    {% extends 'base.html' %}
+
+    {% block content %}
+        <h1>Upcoming Events to look out for and watch us at work!!</h1>
+        <ul>
+        {% for event in events %}
+            <li>{{ event.name }} ({{ event.start_date|date:"F d, Y" }})</li>
+            <ul>
+                <li>
+                    <strong>Event Name:</strong> Dance with Mandela
+                    <br>
+                    <strong>Date:</strong> July 18, 2024
+                    <br>
+                    <strong>Location:</strong> South Beach Durban
+
+                    <strong>Event Name:</strong> Vinyl Masters
+                    <br>
+                    <strong>Date:</strong> October 25, 2024
+                    <br>
+                    <strong>Location:</strong> South Beach Durban
+
+                    <strong>Event Name:</strong> Pens Down
+                    <br>
+                    <strong>Date:</strong> Decmber 6, 2024
+                    <br>
+                    <strong>Location:</strong> Beach Bums Lounge
+                </li>
+             
+            </ul>
+            
+        {% endfor %}
+        </ul>
+    {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<style>
+    body {
+        background-color: #0a260a;
+    }
+    h3, a, h2 {
+            color: rgb(244, 244, 48);
+    }
+</style>
+
+{% extends 'users/base.html' %}
+
+{% block content %}
+    <br>
+    <div class="alert alert-success" role="alert">
+        <h2 style="text-align: center;">Logged out!</h2>
+    </div>
+
+    <h3>Login again?</h3>
+    <a href="{% url 'login' %}">---> Login</a> <br>
+    <a href="{% url 'home' %}"><--- Or go back to home.</a>
+    <img src="dancing.jpg" alt="Dancing People" style="width: 100%; position: fixed; bottom: 0;">
+{% endblock content %}

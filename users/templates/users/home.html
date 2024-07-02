@@ -1,0 +1,73 @@
+<style>
+    body {
+        background-color: #0a260a;
+    }
+
+    h1, a,h3,h2, footer {
+        color: rgb(244, 244, 48);
+    }
+
+    h1 {
+        text-align: center;
+        animation: fadeIn 10s ease-in-out infinite;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .alert {
+        position: fixed;
+        top: 0;
+    }
+</style>
+<form action="" method="POST">
+    {% csrf_token %}
+    {% for field in form %}
+        <p>{{ field.label }}: <br> {{ field }}</p>
+    {% endfor %}
+    <button type="submit">Logout?</button>
+</form>
+
+{% if user.is_authenticated %}
+    <div class="alert alert-success" role="alert">
+        <h1>Welcome to the musical experience of DJ's @ Work, {{ user.username }}!</h1>
+        <img src="dancing.jpg" alt="Dancing People" style="width: 100%; position: fixed; bottom: 0;">
+        <a href="{% url 'logout' %}">Logout?</a>
+    </div>
+{% else %}
+    <div class="alert alert-success" role="alert">
+        <h3>Welcome to the musical experience of DJ's @ Work!</h3>
+        <a href="{% url 'register' %}">Signup</a>
+        <a href="{% url 'login' %}">Login</a>
+    </div>
+    <img src="dancing.jpg" alt="Dancing People" style="width: 100%; position: fixed; bottom: 0;">
+{% endif %}
+
+
+
+#create links to click on to access the other applications use buttons
+<!-- home.html -->
+<button onclick="window.location='{% url 'event_list' %}'">Upcoming Events</button>
+<button onclick="window.location='{% url 'playlist' %}'">My Playlist</button>
+<button onclick="window.location='{% url 'image_gallary' %}'">Image Gallery</button>
+
+<style>
+    button {
+        background-color: #0074D9;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+</style>
+<a href="{% url 'event_list' %}">Upcoming Events</a>
+<a href="{% url 'playlist' %}">My Playlist</a>
+<a href="{% url 'image_gallery' %}">Image Gallery</a>
+eg
+

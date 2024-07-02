@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ's @ work</title>
+    <style>
+        body {
+            background-color: #0a260a;;
+        }
+        h1, h3, p, body, ul, li {
+            color: rgb(244, 244, 48);
+        }
+    </style>
+</head>
+<body>
+    {% extends 'base.html' %}
+
+    {% block content %}
+        <h1>Playlist, of songs played at our last event we were @ Work</h1>
+        <ul>
+            {% for song in songs %}
+                <li>
+                    <strong>Song title:</strong> Summer Daze
+                    <br>
+                    <strong>Artist:</strong> Nick Holder
+                    <br>
+                </li>
+                <li>
+                    <strong>Song title:</strong> All I AM
+                    <br>
+                    <strong>Artist:</strong> Sir LSG
+                    <br>
+                </li>
+                <li>
+                    <strong>Song title:</strong> That Night
+                    <br>
+                    <strong>Artist:</strong> Jazzinova
+                    <br>
+                </li>
+                <li>
+                    <strong>Song title:</strong> Fly with me
+                    <br>
+                    <strong>Artist:</strong> Ree Moris
+                    <br>
+                </li>
+                <li>
+                    <strong>Song title:</strong> Cure and the cause
+                    <br>
+                    <strong>Artist:</strong> Fish go deep
+                    <br>
+                </li>
+                <li>
+                    <strong>Song title:</strong> Swimming places
+                    <br>
+                    <strong>Artist:</strong> Julien Jabre
+                    <br>
+                </li>
+                <li>
+                    <strong>Song title:</strong> Elevator
+                    <br>
+                    <strong>Artist:</strong> Louie Vega
+                    <br>
+                </li>
+                <li>
+                    <strong>Song title:</strong> Careful careless
+                    <br>
+                    <strong>Artist:</strong> Sir LSG
+                    <br>
+                </li>
+                <li>
+                    <strong>Song title:</strong> They keep trying
+                    <br>
+                    <strong>Artist:</strong> 
+                    <br>
+                </li>
+                <li>
+                    <strong>Song title:</strong> Dance with Mandela
+                    <br>
+                    <strong>Artist:</strong> Kaylow
+                    <br>
+                </li>
+                <li>
+                    <strong>Song title:</strong> Matender
+                    <br>
+                    <strong>Artist:</strong> Brewed souls
+                    <br>
+                </li>
+                <li>
+                    <strong>Song title:</strong>Sizwile
+                    <br>
+                    <strong>Artist:</strong> Bongi Mvuyana
+                    <br>
+                </li>
+                <li>
+                    <strong>Song title:</strong> Velvet Clouds
+                    <br>
+                    <strong>Artist:</strong> Da Capo
+                    <br>
+                </li>
+                <li>
+                    <strong>Song title:</strong> Fortune Teller
+                    <br>
+                    <strong>Artist:</strong> Black Motion
+                    <br>
+                </li>
+                <li>
+                    <strong>Song title:</strong> Fallen
+                    <br>
+                    <strong>Artist:</strong> Gaba Canel
+                    <br>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endblock %}
+</body>
